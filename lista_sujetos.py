@@ -9,11 +9,15 @@ nombres_alumnos = []
 materias_reprobadas = []
 def crea_numeros_cuenta():
 
-    for i in range(400):
+    for i in range(5000):
 
-        cuenta = ''.join([str(random.randrange(9))for j in (range(10))])
-        numeros_de_cuenta.append(cuenta)
-
+        cuenta = ''.join([str(random.randrange(10))for j in (range(9))])
+        
+        if cuenta.startswith('4') and cuenta[1] == '1' and cuenta[2] == '7':
+            numeros_de_cuenta.append(cuenta)
+        
+        if cuenta.startswith('4') and cuenta[1] =='1' and cuenta[2] == '8':
+            numeros_de_cuenta.append(cuenta)
     print(numeros_de_cuenta)
     print(len(numeros_de_cuenta))
 
@@ -43,8 +47,8 @@ def adeudo_materias():
 
 
 
-#crea_numeros_cuenta()
+crea_numeros_cuenta()
 #crea_nombres()
-adeudo_materias()
+#adeudo_materias()
 
 
